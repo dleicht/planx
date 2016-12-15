@@ -90,3 +90,6 @@ ENV/
 
 # Apple specific files
 .DS_Store
+
+# Database files
+*.sqlite

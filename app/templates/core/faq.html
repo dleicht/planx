@@ -1,0 +1,13 @@
+{% extends "common/page_base.html" %}  {# common/page_base.html extends base.html #}
+
+{% block content %}
+<h4>#1 - Ich kann mich nicht einloggen.</h4>
+<p>Haben Sie, nach der Registrierung, den Bestätigungslink per eMail aktiviert?<br/>
+<a href="{{ url_for('user.resend_confirm_email') }}">Hier</a> können Sie den Link erneut anfordern.</p>
+
+<h4>#2 - Dienstplankürzel: Noch nicht aktiviert?</h4>
+<p>Aus Sicherheits- und Datenschutzgründen muss jede Registrierung per Hand evaluiert werden um Missbrauch zu verhindern.<br/>
+Dieser Prozess kann einige Tage dauern. Nach der Aktivierung erscheinen dann das echte Dienstplankürzel und verfügbare Dienstzeiten.</p>
+
+
+{% endblock %}

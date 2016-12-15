@@ -1,0 +1,24 @@
+{% extends "common/page_base.html" %}  {# common/page_base.html extends base.html #}
+
+{% block content %}
+
+<p>PLANX&trade; - Dienstplan online</p>
+<p>Personenbezogene Dienstzeiten der Abteilung für Anästhesie und Intensivmedizin am UKGM Gießen.</p><br/>
+
+{% if not current_user.is_authenticated %}
+<p>Um diesen Dienst nutzen zu k&ouml;nnen m&uuml;ssen Sie sich zun&auml;chst <a href="{{ url_for('user.register') }}">registrieren.</a></p>
+<p>Sie erhalten einen Bestätigungslink per eMail. Diesen Link müssen Sie aktivieren. Erst dann ist ein <a href="{{ url_for('user.login') }}">Login</a> möglich.
+<p>Aus Datenschutzgründen muss Ihr Benutzerkonto manuell intern geprüft werden. Dies kann einige Tage dauern.</p>
+<p>Sobald Sie freigeschaltet wurden werden Ihnen unter <a href="{{ url_for('core.user_page') }}">Meine Dienste</a> das Dienstplankürzel und verfügbare Dienstzeiten angezeigt.</p><br/>
+<p>
+{% endif %}
+<p>Vielen Dank für Ihre Teilnahme!<br/><br/><br/>
+
+
+<p>
+    Probleme?<br/>
+    - Lesen Sie unsere <a href="{{ url_for('core.faq_page') }}">FAQ</a><br/>
+    - Schreiben Sie eine eMail an: dominik.leicht@chiru.med.uni-giessen.de
+</p>
+
+{% endblock %}

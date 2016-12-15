@@ -1,0 +1,8 @@
+{% extends "common/page_base.html" %}  {# common/page_base.html extends base.html #}
+
+{% block content %}
+<h2>Hallo, {{ current_user.first_name }}!</h2>
+                <p>Sie werden mit folgendem Dienstplank&uuml;rzel gef&uuml;hrt: {{ current_user.planname }}</p>
+                <p>Hier finden Sie ihre eingetragenen Dienste:</p><br/>
+
+{% endblock %}

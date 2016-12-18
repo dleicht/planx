@@ -1,0 +1,11 @@
+{% extends 'flask_user/emails/base_message.html' %}
+
+{% block message %}
+<p>Sie müssen Ihre eMail-Adresse bestätigen um PLANX - Dienstplan online - nutzen zu können.</p>
+
+<p>Wenn Sie diese Bestätigung angefordert haben, dann klicken Sie bitte den folgenden Link:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ confirm_email_link }}">Bestätigen</a></p>
+
+<p>Falls nicht, dann ignorieren Sie bitte einfach diese eMail.</p>
+
+{% endblock %}
